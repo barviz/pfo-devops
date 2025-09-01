@@ -5,11 +5,11 @@ header("Content-Type: application/json");
 $input = json_decode(file_get_contents("php://input"), true);
 
 
-if (isset($input["usuario"]) && isset($input["password"])) {
-    $usuario = $input["usuario"];
+if (isset($input["user"]) && isset($input["password"])) {
+    $user = $input["user"];
     $password = $input["password"];
 
-    if ($usuario !== "" && $password !== "") {
+    if ($user !== "" && $password !== "") {
         echo json_encode([
             "status" => "ok",
             "mensaje" => "usuario recibido OK"
